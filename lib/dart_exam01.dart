@@ -56,8 +56,11 @@ void main(){
 
   // 7. 전체 트랜잭션 중 최대값은 얼마인가?(value를 말하는건가?)
 
-  final items = transactions.map((e) => e.value).toList();
-  print(items.reduce((value, element) => max(value, element)));
+  final maxValue = transactions.map((e) => e.value).toList();
+  print(maxValue.reduce((value, element) => max(value, element)));
   //왜 where는 안되고 map은 되징?
 
+//8. 전체 트랜잭션 중 최대값은 얼마인가?(value를 말하는건가?)
+  final minValue = transactions.map((e) => e.value).toList();
+  print(minValue.reduce((value, element) => min(value, element)));
 }
